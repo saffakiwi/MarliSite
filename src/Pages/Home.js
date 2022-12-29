@@ -3,9 +3,10 @@ import Card from "@material-ui/core/Card";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuHome from "../Components/menuHome";
+import Footer from "../Components/Footer";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import { shadows } from '@material-ui/system';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   heroimg: {
     borderRadius: "50%",
     margin: "auto",
-    marginTop: "10px"
+    marginTop: "30px"
     // marginTop: "-50px",
   },
   heroDiv: {
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "10px",
   },
   infoDiv: {
-    height: "500px",
+    height: "450px",
     backgroundColor: "#FFF",
   },
   infoCard: {
@@ -51,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     height: "400px",
     width: "98%",
     marginTop: "-40px",
+    marginLeft: "15px",
     margin: "auto",
     backgroundColor: "#FFF",
     opacity: "80%",
@@ -62,8 +64,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Dosis, sans-serif"
   },
   cardMap: {
-    padding: "10px",
-    height: "820px",
+    // padding: "10px",
+    height: "790px",
+    width: "100%",
     backgroundColor: "#dad7cd",
     alignContent: "center",
     margin: "auto",
@@ -160,7 +163,7 @@ export default function Home() {
 
       <div>
         <Paper className={classes.cardMap}>
-          <Grid container spacing={2}>
+          <Grid container>
             <Grid item xs={12} style={{ height: "200px", margin: "auto" }}>
               <Card className={classes.location} elevation={4}>
                 <Typography className={classes.infoCardHeader} style={{textDecoration: "underline #a3b18a"}}>Location</Typography>
@@ -179,6 +182,8 @@ export default function Home() {
           </Grid>
         </Paper>
       </div>
+
+      <Footer/>
     </>
   );
 }

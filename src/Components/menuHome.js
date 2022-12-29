@@ -32,7 +32,7 @@ export default function MenuHome() {
 
   return (
     <div className={classes.root}>
-      <AppBar className={classes.appbar} position="static" elevation={5}>
+      <AppBar className={classes.appbar} position="static" elevation={12}>
         <Toolbar className={classes.menuLinks}>
           <Button className={classes.menubtn1} color="inherit">Home</Button>
           <Button className={classes.menubtn1} color="inherit">About</Button>
