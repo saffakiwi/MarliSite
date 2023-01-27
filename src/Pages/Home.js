@@ -168,7 +168,7 @@ export default function Home() {
               <Card className={classes.location} elevation={4}>
                 <Typography className={classes.infoCardHeader} style={{textDecoration: "underline #a3b18a"}}>Location</Typography>
                 <Typography className={classes.infoCardHeader}>
-                  Bethlehem Psycological Services <br />
+                  Bethlehem Psyhcological Services <br />
                   36 Sutherland Road <br />
                   Brookfield <br />
                   Tauranga

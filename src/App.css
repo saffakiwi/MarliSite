@@ -30,6 +30,10 @@
   color: #61dafb;
 }
 
+.MuiInputLabel-root.Mui-focused {
+  color: #a3b18a !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
