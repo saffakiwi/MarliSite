@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 <>
     <Paper className={classes.Footer}>
 
-        <Grid container spacing={2} style={{height: "140px"}}>
+        <Grid container spacing={2} style={{height: "140px", width: "95%"}}>
 
             <Grid item md={6} style={{height: "140px"}}>
                 <Typography variant="text" className={classes.copyright}>© Rdk Web Design</Typography>
