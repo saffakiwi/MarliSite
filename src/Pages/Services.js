@@ -51,9 +51,9 @@ const useStyles = makeStyles((theme) => ({
     width: 500,
   },
   tabContent: {
-    height: 473,
+    height: 700,
     padding: 0,
-    overflow: 'hidden',
+    // overflow: 'hidden',
   },
   
 }));
@@ -86,10 +86,10 @@ export default function Services() {
           aria-label="full width tabs example"
         >
           <Tab label="Services" {...a11yProps(0)} />
-          <Tab label="Psychotherapy" {...a11yProps(1)} />
-          <Tab label="Play Therapy" {...a11yProps(2)} />
-          <Tab label="Family Therapy" {...a11yProps(3)} />
-          <Tab label="Pricing" {...a11yProps(4)} />
+          <Tab label="Suport for Children & Adolescence" {...a11yProps(1)} />
+         <Tab label="Support for Families" {...a11yProps(2)} /> 
+          {/* <Tab label="Family Therapy" {...a11yProps(3)} />  */}
+          <Tab label="Pricing" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
       <SwipeableViews

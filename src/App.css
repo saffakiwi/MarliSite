@@ -39,9 +39,12 @@
 }
 
 .MuiTab-textColorPrimary.Mui-selected {
-  color: #a3b18a !important;
+  color: #3a5a40 !important;
 }
 
+.PrivateTabIndicator-colorPrimary-9 {
+  background-color: #a3b18a !important;
+}
 
 .tabPanel {
   overflow: hidden !important;

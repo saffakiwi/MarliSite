@@ -9,9 +9,12 @@ const useStyles = makeStyles((theme) => ({
   },
   serviceDiv:{
     display: 'flex',
+    flexDirection: 'column',
   },
   serviceGrid:{
     width: '100%',
+    display: 'flex',
+    // flexDirection: 'row',
   },
   serviceImage: {
     maxWidth: '100%',
@@ -32,10 +35,35 @@ export default function MyServices() {
   const classes = useStyles();
 
   return (
-    <div className={classes.serviceDiv}>
+    <div >
 
+    <Grid container>
+    <Grid item md={6}>
+    <div>
+    <Typography className={classes.servicesHeader}>
+        My Services
+    </Typography>
+    </div>
 
+    <div >
+    <Typography className={classes.servicesText}>
+        . This is some random text to display for my services. <br/>
+        . This is some random text to display for my services <br/>
+        . This is some random text to display for my services. <br/>
+    </Typography>
+    </div>
+    </Grid>
+    
+    
     <Grid item md={6} className={classes.serviceGrid}>
+    <img src="/services-therapy.jpg" alt="therapy" className={classes.serviceImage}/>
+    </Grid>
+    
+    <Grid item md={6} className={classes.serviceGrid}>
+    <img src="/services-therapy.jpg" alt="therapy" className={classes.serviceImage}/>
+    </Grid>
+
+    <Grid item md={6} >
     <div>
     <Typography className={classes.servicesHeader}>
         My Services
@@ -50,12 +78,7 @@ export default function MyServices() {
     </Typography>
     </div>
     </Grid>
-    
-
-    <Grid item md={6}>
-    <img src="/services-therapy.jpg" alt="therapy" className={classes.serviceImage}/>
     </Grid>
-
     </div>
   );
 }
