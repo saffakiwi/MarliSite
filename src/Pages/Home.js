@@ -7,7 +7,6 @@ import Footer from "../Components/Footer";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -29,18 +28,23 @@ const useStyles = makeStyles((theme) => ({
   heroimg: {
     borderRadius: "50%",
     margin: "auto",
-    marginTop: "30px"
+    marginTop: "30px",
+    justifyContent: "center",
+    display: "flex",
     // marginTop: "-50px",
   },
   heroDiv: {
     display: "flex",
     flexDirection: "column",
     margin: "auto",
+    width: "100%",
   },
   headingText: {
     color: "#3a5a40",
     fontFamily: "Dancing Script, regular",
     marginBottom: "10px",
+    justifyContent: "center",
+    display: "flex",
   },
   infoDiv: {
     height: "450px",
@@ -57,11 +61,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFF",
     opacity: "80%",
     borderRadius: "16px",
+    justifyContent: "center",
   },
   infoCardHeader: {
     marginBottom: "10px",
-    marginTop:"10px",
-    fontFamily: "Dosis, sans-serif"
+    marginTop: "10px",
+    fontFamily: "Dosis, sans-serif",
+    justifyContent: "center",
+    display: "flex",
+    textAlign: "center",
   },
   cardMap: {
     // padding: "10px",
@@ -70,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#dad7cd",
     alignContent: "center",
     margin: "auto",
+    marginBottom: "10px",
   },
   location: {
     display: "flex",
@@ -81,7 +90,6 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     height: "80%",
   },
- 
 }));
 
 export default function Home() {
@@ -90,10 +98,19 @@ export default function Home() {
   const AddressMap = () => {
     return (
       <div className="google-map-code">
-        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2635.7726712590606!2d176.1427823831943!3d-37.69165859892387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6ddba54b313f6f%3A0x5bbc6581a27dc865!2s36%20Sutherland%20Road%2C%20Judea%2C%20Tauranga%203110!5e0!3m2!1sen!2snz!4v1672275818707!5m2!1sen!2snz" width="100%" height="600px" style={{border:0}} allowFullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          title="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2635.7726712590606!2d176.1427823831943!3d-37.69165859892387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6ddba54b313f6f%3A0x5bbc6581a27dc865!2s36%20Sutherland%20Road%2C%20Judea%2C%20Tauranga%203110!5e0!3m2!1sen!2snz!4v1672275818707!5m2!1sen!2snz"
+          width="100%"
+          height="600px"
+          style={{ border: 0 }}
+          allowFullscreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <>
@@ -111,7 +128,7 @@ export default function Home() {
               />
             </Grid>
 
-            <Grid item xs={12} style={{marginBottom: "70px"}}>
+            <Grid item xs={12} style={{ marginBottom: "70px" }}>
               <Typography variant="h3" className={classes.headingText}>
                 Marli de Klerk
               </Typography>
@@ -123,17 +140,24 @@ export default function Home() {
         </Paper>
       </div>
 
-      <Paper className={classes.infoDiv} 
-          sx = {{
-            boxShadow: '8px 7px 8px -4px rgb(0 0 0 / 20%), 0px 12px 17px 2px rgb(0 0 0 / 14%), 0px 5px 22px 4px rgb(0 0 0 / 12%)',
-          }}>
+      <Paper
+        className={classes.infoDiv}
+        sx={{
+          boxShadow:
+            "8px 7px 8px -4px rgb(0 0 0 / 20%), 0px 12px 17px 2px rgb(0 0 0 / 14%), 0px 5px 22px 4px rgb(0 0 0 / 12%)",
+        }}
+      >
         <Grid container spacing={2}>
           <Grid item md={6} xs={12}>
             <Card className={classes.infoCard} elevation={6}>
               <Typography variant="h5" className={classes.infoCardHeader}>
                 About Me
               </Typography>
-              <Typography variant="body2" style={{width: "80%", margin: "auto"}} className={classes.infoCardHeader}>
+              <Typography
+                variant="body2"
+                style={{ width: "80%", margin: "auto" }}
+                className={classes.infoCardHeader}
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -149,7 +173,11 @@ export default function Home() {
               <Typography variant="h5" className={classes.infoCardHeader}>
                 Services
               </Typography>
-              <Typography variant="body2" style={{width: "80%", margin: "auto"}} className={classes.infoCardHeader}>
+              <Typography
+                variant="body2"
+                style={{ width: "80%", margin: "auto" }}
+                className={classes.infoCardHeader}
+              >
                 . Lorem ipsum dolor sit amet, consectetuer <br />
                 . Aliquam tinciduntmauris eu risus. <br />
                 . Vestibulum auctor dapibus neque. <br />
@@ -166,7 +194,12 @@ export default function Home() {
           <Grid container>
             <Grid item xs={12} style={{ height: "200px", margin: "auto" }}>
               <Card className={classes.location} elevation={4}>
-                <Typography className={classes.infoCardHeader} style={{textDecoration: "underline #a3b18a"}}>Location</Typography>
+                <Typography
+                  className={classes.infoCardHeader}
+                  style={{ textDecoration: "underline #a3b18a" }}
+                >
+                  Location
+                </Typography>
                 <Typography className={classes.infoCardHeader}>
                   Bethlehem Psyhcological Services <br />
                   36 Sutherland Road <br />
@@ -177,14 +210,13 @@ export default function Home() {
             </Grid>
 
             <Grid item xs={12} className={classes.map}>
-            <AddressMap/>
+              <AddressMap />
             </Grid>
           </Grid>
         </Paper>
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }
-

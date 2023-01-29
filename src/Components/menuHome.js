@@ -3,6 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Routes,
+  Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Dosis, sans-serif",
       fontSize: "20px"
   },
+  navlinks:{
+    textDecoration: "none",
+    color: "inherit",
+  }
 }));
 
 export default function MenuHome() {
@@ -34,10 +44,13 @@ export default function MenuHome() {
     <div className={classes.root}>
       <AppBar className={classes.appbar} position="static" elevation={12}>
         <Toolbar className={classes.menuLinks}>
-          <Button className={classes.menubtn1} color="inherit">Home</Button>
-          <Button className={classes.menubtn1} color="inherit">About</Button>
-          <Button className={classes.menubtn1} color="inherit">Services</Button>
-          <Button className={classes.menubtn1} color="inherit">Contact Me</Button>
+
+          <nav>
+          <Link className={classes.navlinks} to="/"><Button className={classes.menubtn1} color="inherit">Home</Button></Link>
+          <Link className={classes.navlinks} to="/about"><Button className={classes.menubtn1} color="inherit">About</Button></Link>
+          <Link className={classes.navlinks} to="/services"><Button className={classes.menubtn1} color="inherit">Services</Button></Link>
+          <Link className={classes.navlinks} to="/contact"><Button className={classes.menubtn1} color="inherit">Contact Me</Button></Link>
+          </nav>
         </Toolbar>
       </AppBar>
     </div>

@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+html, body, #root {
+  /* height: 100%; */
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+ }
+
+ footer { 
+  margin-top: auto;
+ }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -43,6 +57,10 @@
 }
 
 .PrivateTabIndicator-colorPrimary-9 {
+  background-color: #a3b18a !important;
+}
+
+.MuiTabs-indicator {
   background-color: #a3b18a !important;
 }
 

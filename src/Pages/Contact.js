@@ -1,17 +1,21 @@
 import React from "react";
-import '../App.css';
+import "../App.css";
 import MenuHome from "../Components/menuHome";
 import Footer from "../Components/Footer";
 import { Grid } from "@material-ui/core";
 import { Card } from "@material-ui/core";
-import { makeStyles, createTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  makeStyles,
+  createTheme,
+  ThemeProvider,
+} from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import TextField from "@material-ui/core/TextField";
-import Icon from '@material-ui/core/Icon';
-import Button from '@material-ui/core/Button';
+import Icon from "@material-ui/core/Icon";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -42,6 +46,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "30px",
     fontFamily: "Dosis, sans-serif",
     textDecoration: "underline #a3b18a",
+    justifyContent: "center",
+    display: "flex",
   },
   detailicons: {
     display: "flex",
@@ -74,33 +80,34 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   contactDetails: {
-      marginTop: "20px",
-      padding: "10px",
-      width: "100%",
-      margin: "auto",
+    marginTop: "20px",
+    padding: "10px",
+    width: "100%",
+    margin: "auto",
+    justifyContent: "center",
+    display: "flex",
   },
   formInput: {
     width: "90%",
-    '& .MuiInput-underline:after': {
-      borderColor: ' #a3b18a',
+    "& .MuiInput-underline:after": {
+      borderColor: " #a3b18a",
     },
-   label: {
-    ".Mui-focused":{
-      color: "#a3b18a",
-    }
-   }
-},
+    label: {
+      ".Mui-focused": {
+        color: "#a3b18a",
+      },
+    },
+  },
   sendButton: {
     width: "30%",
     margin: "auto",
     marginTop: "20px",
     backgroundColor: "#a3b18a",
-    '&:hover': {
-      backgroundColor: '#fff',
-      color: '#a3b18a',
+    "&:hover": {
+      backgroundColor: "#fff",
+      color: "#a3b18a",
+    },
   },
-  },
- 
 }));
 
 export default function Contact() {
@@ -139,7 +146,10 @@ export default function Contact() {
                 <LocationOnIcon />
               </div>
               <div className={classes.detailstext}>
-                <Typography >Bethlehem Psychological Services, <br/>36 Sutherland Road, Brookfield, Tauranga</Typography>
+                <Typography>
+                  Bethlehem Psychological Services, <br />
+                  36 Sutherland Road, Brookfield, Tauranga
+                </Typography>
                 {/* <Typography>Brookfield</Typography> */}
               </div>
             </div>
@@ -166,50 +176,56 @@ export default function Contact() {
 
         <Grid item md={6} sm={12}>
           <Card elevation={6} className={classes.details}>
-          <Typography variant="h5" className={classes.aboutCardHeader}>
+            <Typography variant="h5" className={classes.aboutCardHeader}>
               Contact Me
             </Typography>
-            
-          
+
             <Grid item md={12} sm={12} className={classes.contactHeader}>
-            <form noValidate autoComplete="off" className={classes.form}>
-            <Grid item md={12} sm={12} className={classes.contactDetails}>
-            <TextField className={classes.formInput} id="standard-full-width" label="Full Name"/>
-            </Grid>
-            <Grid item md={12} sm={12} className={classes.contactDetails}>
-            <TextField className={classes.formInput} id="standard-full-width" label="Email Address" />
-            </Grid>
-            <Grid item md={12} sm={12} className={classes.contactDetails}>
-            <TextField className={classes.formInput} id="standard-full-width" label="Phone Number" />
-            </Grid>
-            <Grid item md={12} sm={12} className={classes.contactDetails}>
-            <TextField
-            className={classes.formInput}
-            InputLabelProps={{className: classes.label}}
-          id="standard-multiline-flexible"
-          label="Message"
-          multiline
-          maxRows={2}
-        />
-        </Grid>
+              <form noValidate autoComplete="off" className={classes.form}>
+                <Grid item md={12} sm={12} className={classes.contactDetails}>
+                  <TextField
+                    className={classes.formInput}
+                    id="standard-full-width"
+                    label="Full Name"
+                  />
+                </Grid>
+                <Grid item md={12} sm={12} className={classes.contactDetails}>
+                  <TextField
+                    className={classes.formInput}
+                    id="standard-full-width"
+                    label="Email Address"
+                  />
+                </Grid>
+                <Grid item md={12} sm={12} className={classes.contactDetails}>
+                  <TextField
+                    className={classes.formInput}
+                    id="standard-full-width"
+                    label="Phone Number"
+                  />
+                </Grid>
+                <Grid item md={12} sm={12} className={classes.contactDetails}>
+                  <TextField
+                    className={classes.formInput}
+                    InputLabelProps={{ className: classes.label }}
+                    id="standard-multiline-flexible"
+                    label="Message"
+                    multiline
+                    maxRows={2}
+                  />
+                </Grid>
 
-        <Button
-        variant="contained"
-        color="primary"
-        className={classes.sendButton}
-        endIcon={<Icon>send</Icon>}
-      >
-        Send
-      </Button>
-
-        </form>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={classes.sendButton}
+                  endIcon={<Icon>send</Icon>}
+                >
+                  Send
+                </Button>
+              </form>
             </Grid>
-            
-       
           </Card>
         </Grid>
-      
-      
       </Grid>
 
       <AddressMap />

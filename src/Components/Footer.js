@@ -9,12 +9,17 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+     
     },
     Footer: {
         display: 'flex',
         width: '100%',
-        height: '160px',
-        backgroundColor: "#344e41"
+        height: '200px',
+        backgroundColor: "#344e41",
+        position: 'relative',
+left:0,
+bottom:0,
+right:0,
     },
     copyright: {
         display: 'flex',
